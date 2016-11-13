@@ -107,7 +107,7 @@ public class Badge {
     }
 
     private ConfigurationNode loadDefault() throws IOException {
-        return HoconConfigurationLoader.builder().setURL(game.getAssetManager().getAsset(this, "default.conf").get().getUrl()).build().load();
+        return HoconConfigurationLoader.builder().setURL(game.getAssetManager().getAsset(this, "default.conf").get().getUrl()).build().load(loader.getDefaultOptions());
     }
 
     private void mapDefault() {
